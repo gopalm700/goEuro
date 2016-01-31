@@ -135,5 +135,17 @@ public class CityInfomation {
 				+ countryCode + ", coreCountry=" + coreCountry + ", distance="
 				+ distance + "]";
 	}
+	
+	public String toCSVString(){
+		String latitude=null;
+		String longitude=null;
+		
+		if(geo_position != null){
+			latitude = geo_position.getLatitude();
+			longitude = geo_position.getLongitude();
+		}
+		
+		return _id+","+name+","+type+","+latitude+","+longitude;
+	}
 
 }

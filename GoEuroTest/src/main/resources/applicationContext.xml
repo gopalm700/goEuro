@@ -1,0 +1,29 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
+
+   <bean id="getResultService" class="com.goeuro.service.impl.GetResultServiceImpl">
+       <property name="restUrl" value="${rest.url.endpoint}"/>
+   </bean>
+   <bean id = "validator" class="com.goeuro.service.validator.DataValidator">
+   </bean>
+   
+   <bean id ="csvService" class="com.goeuro.service.impl.CSVServiceImpl">
+   	<property name="csvHeader" value="${csv.header}"></property>
+   </bean>
+   <bean id="goEuroService" class="com.goeuro.service.impl.GoEuroServiceImpl">
+   	<property name="csvService" ref="csvService"></property>
+   	<property name="dataValidator" ref="validator"></property>
+   	<property name="getResultService" ref="getResultService"></property>
+   </bean>
+   <bean id="appProperties"
+    class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    <property name="locations">
+        <list>
+            <value>classpath:application.properties</value>
+        </list>
+    </property>
+</bean>
+
+</beans>
