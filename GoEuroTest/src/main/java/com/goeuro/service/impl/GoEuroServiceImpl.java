@@ -23,7 +23,7 @@ public class GoEuroServiceImpl implements IGoEuroService{
 	public void startProcess(String[] data) {
 		log.info("Process started!");
 		if(dataValidator.validateData(data) == false){
-			log.error("Invalid Data");	
+			log.error("Invalid Data");
 		}
 		else{
 			CityInfomation[] cityList = getResultService.fetchData(data[0]);
