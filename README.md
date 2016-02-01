@@ -3,8 +3,8 @@ Java Developer Test
 
 
 
-System requirements:
-Java 8
+System requirements:  
+Java 8  
 Program needs to be running with internet connection to fetch the data from API
 
 
