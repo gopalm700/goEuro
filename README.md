@@ -1,6 +1,8 @@
 # goEuro
 Java Developer Test
 
+Important:
+Program needs to be running with internet connection. as it may try to download the spring schema. and to fetch the data.
 
 Steps for running the program
 
@@ -8,10 +10,10 @@ download the GoEuroTest.jar from the following location
 
 https://github.com/gopalm700/goEuro/
 
-|--GoEuroTest <--- Here you can see the code.
-|--GoEuroTest.jar <------ This "EXECUTABLE JAR" you need to download for running the program.
-|--README.md
-|--.gitignore
+|--GoEuroTest <--- Here you can see the code.  
+|--GoEuroTest.jar <------ This "EXECUTABLE JAR" you need to download for running the program.  
+|--README.md  
+|--.gitignore  
 
 command: java -jar GoEuroTest.jar "<city name>"
 
