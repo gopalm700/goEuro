@@ -16,6 +16,7 @@ import org.junit.runner.RunWith;
 import au.com.bytecode.opencsv.CSVReader;
 
 import com.goeuro.dto.CityInfomation;
+import com.goeuro.exception.GoEuroApplicationException;
 
 @RunWith(EasyMockRunner.class)
 public class TestCSVServiceImpl {
@@ -29,7 +30,7 @@ public class TestCSVServiceImpl {
 	}
 
 	@Test
-	public void testExportToCSV() {
+	public void testExportToCSV() throws GoEuroApplicationException {
 		try {
 			CityInfomation[] obj = new CityInfomation[2];
 			CityInfomation cityInfomation = null;

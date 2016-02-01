@@ -8,6 +8,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import com.goeuro.dto.CityInfomation;
+import com.goeuro.exception.GoEuroApplicationException;
 import com.goeuro.service.ICSVService;
 import com.goeuro.service.IGetResultService;
 import com.goeuro.service.validator.DataValidator;
@@ -28,7 +29,7 @@ public class TestGoEuroServiceImpl {
 	private IGetResultService getResultService;
 
 	@Test
-	public void teststartProcess() {
+	public void teststartProcess() throws GoEuroApplicationException {
 		String[] arr = { "berlin", "munich" };
 		CityInfomation[] cityInfomation = new CityInfomation[2];
 		EasyMock.expect(
@@ -45,7 +46,7 @@ public class TestGoEuroServiceImpl {
 	}
 
 	@Test
-	public void teststartProcessInvalidData() {
+	public void teststartProcessInvalidData() throws GoEuroApplicationException {
 		String[] arr = { "berlin", "munich" };
 		EasyMock.expect(
 				dataValidator.validateData(EasyMock.isA(String[].class)))

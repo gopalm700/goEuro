@@ -4,6 +4,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import com.goeuro.dto.CityInfomation;
+import com.goeuro.exception.GoEuroApplicationException;
 import com.goeuro.service.ICSVService;
 import com.goeuro.service.IGetResultService;
 import com.goeuro.service.IGoEuroService;
@@ -20,7 +21,7 @@ public class GoEuroServiceImpl implements IGoEuroService{
 	private IGetResultService getResultService;
 
 	@Override
-	public void startProcess(String[] data) {
+	public void startProcess(String[] data) throws GoEuroApplicationException {
 		log.info("Process started!");
 		if(dataValidator.validateData(data) == false){
 			log.error("Invalid Data");
