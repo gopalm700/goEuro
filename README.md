@@ -1,6 +1,5 @@
 # goEuro
-Java Developer Test
-
+A program to fetch data from api and push results.
 
 
 System requirements:  
